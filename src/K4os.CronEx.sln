@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".environment", ".environment", "{29E74930-3987-4723-ADB2-DC00713BE3BB}"
+	ProjectSection(SolutionItems) = preProject
+		..\.secrets.cfg = ..\.secrets.cfg
+		..\.gitignore = ..\.gitignore
+		..\Directory.Packages.props = ..\Directory.Packages.props
+		..\Directory.Build.props = ..\Directory.Build.props
+		..\Directory.Build.targets = ..\Directory.Build.targets
+		..\settings.cfg = ..\settings.cfg
+		..\.env = ..\.env
+		..\global.json = ..\global.json
+		..\nuget.config = ..\nuget.config
+		..\paket.dependencies = ..\paket.dependencies
+		..\PublicAssembly.props = ..\PublicAssembly.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".resources", ".resources", "{EFDD7FF7-C5AA-4560-81B1-85A82B23B8B6}"
+	ProjectSection(SolutionItems) = preProject
+		..\CHANGES.md = ..\CHANGES.md
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_build", "..\.nuke\build\_build.csproj", "{54E7B9EB-FA80-43BE-96FF-F2E1661A7CA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K4os.CronEx", "K4os.CronEx\K4os.CronEx.csproj", "{F244B08E-3CC7-4FF3-A75A-77BBB5550D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K4os.CronEx.Tests", "K4os.CronEx.Tests\K4os.CronEx.Tests.csproj", "{CF354625-3C18-43E5-BF45-864B4120296B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K4os.CronEx.App", "K4os.CronEx.App\K4os.CronEx.App.csproj", "{3F3604A1-03D6-428F-9972-02DA8DBAA93E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F244B08E-3CC7-4FF3-A75A-77BBB5550D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F244B08E-3CC7-4FF3-A75A-77BBB5550D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F244B08E-3CC7-4FF3-A75A-77BBB5550D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F244B08E-3CC7-4FF3-A75A-77BBB5550D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF354625-3C18-43E5-BF45-864B4120296B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF354625-3C18-43E5-BF45-864B4120296B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF354625-3C18-43E5-BF45-864B4120296B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF354625-3C18-43E5-BF45-864B4120296B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3604A1-03D6-428F-9972-02DA8DBAA93E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3604A1-03D6-428F-9972-02DA8DBAA93E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3604A1-03D6-428F-9972-02DA8DBAA93E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3604A1-03D6-428F-9972-02DA8DBAA93E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E7B9EB-FA80-43BE-96FF-F2E1661A7CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E7B9EB-FA80-43BE-96FF-F2E1661A7CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D93FA683-6785-442B-A16B-776C08D93AD8}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
