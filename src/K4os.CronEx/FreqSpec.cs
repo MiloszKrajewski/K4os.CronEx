@@ -13,8 +13,7 @@ public class FreqSpec
 {
 	/// <summary>Parses list of expressions separated by comma (",").</summary>
 	/// <param name="specs">List (or 1) of expressions.</param>
-	/// <param name="range">Allowed range for given expression.
-	/// Range is used to expand '*' and validate expression's correctness.</param>
+	/// <param name="parser">Parser for single expression.</param>
 	/// <returns>Array of parsed expressions.</returns>
 	public static FreqSpec[] ParseMany(string specs, Func<string, FreqSpec> parser) =>
 		specs.Split(',').Select(parser).ToArray();
@@ -44,6 +43,9 @@ public class FreqSpec
 	/// <summary>Range's step. "n" in "a-b/n".</summary>
 	public int Nth { get; }
 		
+	/// <summary>
+	/// Range of allowed values. It is used to expand '*' and validate expression's correctness.
+	/// </summary>
 	public AllowedRange Range { get; }
 
 	/// <summary>Constructor. Note: values are not validated. Use <see cref="IsValid"/>
@@ -62,16 +64,23 @@ public class FreqSpec
 	/// <returns>Sequence of produced values.</returns>
 	public IEnumerable<int> Enumerate()
 	{
-		if (Max < Min)
-		{
-			var width = Range.Max - Range.Min + 1;
-			for (var i = Min; i <= Range.Max + Max; i += Nth)
-				yield return (i - Range.Min) % width + Range.Min;
-		}
-		else
-		{
-			for (var i = Min; i <= Max; i += Nth)
-				yield return i;
-		}
+		for (var i = Min; i <= Max; i += Nth)
+			yield return i;
+	}
+	
+	/// <summary>Enumerates all values produced by specification a-b/n which can be read as
+	/// "a to b (inclusive) step n", for example: 1-5/2 will produce 1, 3, 5.</summary>
+	/// <returns>Sequence of produced values.</returns>
+	public ulong ToUInt64()
+	{
+		if (Max > 63)
+			throw new ArgumentOutOfRangeException(nameof(Max), "Max value is too big");
+
+		var mask = 0UL;
+		
+		for (var i = Min; i <= Max; i += Nth)
+			mask |= 1UL << i;
+
+		return mask;
 	}
 }

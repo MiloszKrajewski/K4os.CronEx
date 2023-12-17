@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace K4os.CronEx;
 
-public static class Extensions
+internal static class Extensions
 {
 	/// <summary>Tries to parse named group of matched regular expression.</summary>
 	/// <param name="match">Regular expression match.</param>

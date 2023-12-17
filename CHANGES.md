@@ -1,2 +1,3 @@
-## 0.0.1 (2000/01/01)
-* initial release
+## 0.0.1 (2023/12/17)
+* Cron expression parser
+* Crop expression iterator
