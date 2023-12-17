@@ -11,8 +11,8 @@
 
   <PropertyGroup>
     <Product>K4os.CronEx</Product>
-    <Description>...</Description>
-    <PackageTags>... ... ...</PackageTags>
+    <Description>Cron expression parser and iterator</Description>
+    <PackageTags>cron parser</PackageTags>
     <Authors>Milosz Krajewski</Authors>
     <Copyright>Milosz Krajewski</Copyright>
   </PropertyGroup>
