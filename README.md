@@ -9,9 +9,9 @@ Most likely you'll be interested mostly in the iterator, which provides methods 
 occurrence(s) of events described by cron expression.
 
 ```csharp
-var cron = CronSpec.Parse("* * * * *");
+var cron = CronSpec.Parse("0 9,17 * * 1-5");
 var next1 = cron.NextAfter(DateTime.Now);
-var next9 = cron.EnumerateFrom(DateTime.Now).Take(9);
+var nextN = cron.EnumerateFrom(DateTime.Now).Take(10);
 ```
 
 # Build
