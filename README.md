@@ -2,6 +2,12 @@
 
 [![NuGet Stats](https://img.shields.io/nuget/v/K4os.CronEx.svg)](https://www.nuget.org/packages/K4os.CronEx)
 
+# Cron
+
+Cron expression documentation can be found [here](https://en.wikipedia.org/wiki/Cron).
+
+Please note, this implementation does not implement any nonstandard extensions (yet?).
+
 # Usage
 
 This library consists of two components, cron expression parser and cron expression iterator.
